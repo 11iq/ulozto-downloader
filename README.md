@@ -15,7 +15,10 @@ Docker container of [setnicka/ulozto-downloader](https://github.com/setnicka/ulo
 ## Usage
 
 ```
-▶ docker run -t -v <destination_path>:/d ulozto-downloader --parts 16 <https://uloz.to/file/...>
+▶ add function to ~/.bashrc:
+  function ulozto-downloader { docker run --rm -t -v YOUR_PATH:/d ulozto-downloader --parts 50 "$1"; }
+▶ source ~/.bashrc
+▶ ulozto-downloader URL
 ```
-Note: `<destination_path>` paramater must be an absolute path to destination folder, where the file will be downloaded to.
+Note: `YOUR_PATH` paramater must be an absolute path to destination folder, where the file will be downloaded to.
 
