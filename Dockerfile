@@ -1,5 +1,6 @@
 FROM python:3.8
 ENV TERM=xterm
+ARG DEBIAN_FRONTEND=noninteractive
 
 RUN pip3 install --upgrade ulozto-downloader
 RUN apt install apt-transport-https
