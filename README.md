@@ -10,6 +10,7 @@ Docker container of [setnicka/ulozto-downloader](https://github.com/setnicka/ulo
 ▶ git clone https://github.com/jansramek/ulozto-downloader.git
 ▶ cd ulozto-downloader
 ▶ docker build -t ulozto-downloader .
+  (synology: docker build -t ulozto-downloader . --network=host)
 ```
 
 ## Usage
