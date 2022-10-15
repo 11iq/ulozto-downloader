@@ -7,8 +7,7 @@ Requirements: enabled ssh access
               git package installed from Syncommunity repo
 
 ```
-▶ git clone https://github.com/kiwiiikiwiiikiwiii/ulozto-downloader/
-▶ cd ulozto-downloader
+▶ git clone https://github.com/kiwiiikiwiiikiwiii/ulozto-downloader/ && cd ulozto-downloader
 ▶ docker build -t ulozto-downloader . --network=host --no-cache
 ```
 
@@ -35,8 +34,7 @@ function ulozto-downloader { screen -dm docker run --rm -t -v /volume1/ulozto:/d
 ## Install/Build (Ubuntu) [not tested]
 
 ```
-▶ git clone https://github.com/kiwiiikiwiiikiwiii/ulozto-downloader/
-▶ cd ulozto-downloader
+▶ git clone https://github.com/kiwiiikiwiiikiwiii/ulozto-downloader/ && cd ulozto-downloader
 ▶ docker build -t ulozto-downloader . --no-cache
 ```
 
