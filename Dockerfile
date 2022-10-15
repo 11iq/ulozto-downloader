@@ -1,4 +1,4 @@
-FROM python:3.6
+FROM python:3.8
 ENV TERM=xterm
 
 RUN pip3 install --upgrade ulozto-downloader
