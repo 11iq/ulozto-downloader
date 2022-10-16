@@ -5,7 +5,7 @@ Requirements:
 
 ▶ enabled ssh access
 
-▶ firewall setup
+▶ firewall setup (ssh - lan; docker - internet)
 
 ▶ SynoCLI Network tools package installed from Syncommunity repo (screen command)
 
