@@ -5,6 +5,7 @@ Requirements: enabled ssh access
               firewall setup
               SynoCLI Network tools package installed from Syncommunity repo (screen command)
               git package installed from Syncommunity repo
+              user must be able to run docker command with sudo
 
 ```
 ▶ git clone https://github.com/kiwiiikiwiiikiwiii/ulozto-downloader/ && cd ulozto-downloader
@@ -18,6 +19,10 @@ Requirements: enabled ssh access
   function ulozto-downloader { screen -dm docker run --network=host --rm -t -v <YOUR_PATH>:/d ulozto-downloader "$1"; }
 ▶ source /etc.defaults/.bashrc_profile
 ```
+### Add user to run docker command with sudo
+```
+▶ echo "<YOUR_USER>   ALL=(ALL) NOPASSWD: /usr/local/bin/docker" >> /etc/sudoers
+```
 ## Usage (Synology) [tested]
 ```
 ▶ ulozto-downloader URL
@@ -27,6 +32,7 @@ Requirements: enabled ssh access
 ```
 function ulozto-downloader { screen -dm docker run --rm -t -v /volume1/ulozto:/d ulozto-downloader "$1"; }
 ```
+
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
