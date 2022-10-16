@@ -16,7 +16,7 @@ Requirements: enabled ssh access
 
 ```
 ▶ add function to /etc.defaults/.bashrc_profile
-  function ulozto-downloader { screen -dm docker run --network=host --rm -t -v <YOUR_PATH>:/d ulozto-downloader "$1"; }
+  function ulozto-downloader { screen -dm sudo docker run --network=host --rm -t -v <YOUR_PATH>:/d ulozto-downloader "$1"; }
 ▶ source /etc.defaults/.bashrc_profile
 ```
 ### Add user to run docker command with sudo
