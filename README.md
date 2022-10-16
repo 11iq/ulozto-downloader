@@ -7,9 +7,9 @@ Requirements:
 
 ▶ firewall setup (ssh - lan; docker - internet)
 
-▶ SynoCLI Network tools package installed from Syncommunity repo (screen command)
+▶ SynoCLI Network tools package installed from Synocommunity repo (screen command)
 
-▶ git package installed from Syncommunity repo
+▶ git package installed from Synocommunity repo
 
 ▶ user must be able to run docker command with sudo
 
