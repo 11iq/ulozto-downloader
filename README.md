@@ -1,31 +1,37 @@
 # Docker image for ulozto-downloader with working captcha solving (16.10.2022)
 
 ## Install/Build (Synology) [tested]
-Requirements: enabled ssh access
-              firewall setup
-              SynoCLI Network tools package installed from Syncommunity repo (screen command)
-              git package installed from Syncommunity repo
-              user must be able to run docker command with sudo
+Requirements: 
+
+▶ enabled ssh access
+
+▶ firewall setup
+
+▶ SynoCLI Network tools package installed from Syncommunity repo (screen command)
+
+▶ git package installed from Syncommunity repo
+
+▶ user must be able to run docker command with sudo
 
 ```
-▶ git clone https://github.com/kiwiiikiwiiikiwiii/ulozto-downloader/ && cd ulozto-downloader
-▶ docker build -t ulozto-downloader . --network=host --no-cache
+git clone https://github.com/kiwiiikiwiiikiwiii/ulozto-downloader/ && cd ulozto-downloader
+docker build -t ulozto-downloader . --network=host --no-cache
 ```
 
 ## Setup (Synology) [tested]
+#### Add function to /etc.defaults/.bashrc_profile
 
 ```
-▶ add function to /etc.defaults/.bashrc_profile
-  function ulozto-downloader { screen -dm sudo docker run --network=host --rm -t -v <YOUR_PATH>:/d ulozto-downloader "$1"; }
-▶ source /etc.defaults/.bashrc_profile
+function ulozto-downloader { screen -dm sudo docker run --network=host --rm -t -v <YOUR_PATH>:/d ulozto-downloader "$1"; }
+source /etc.defaults/.bashrc_profile
 ```
-### Add user to run docker command with sudo
+#### Add user to run docker command with sudo
 ```
-▶ echo "<YOUR_USER>   ALL=(ALL) NOPASSWD: /usr/local/bin/docker" >> /etc/sudoers
+echo "<YOUR_USER>   ALL=(ALL) NOPASSWD: /usr/local/bin/docker" >> /etc/sudoers
 ```
 ## Usage (Synology) [tested]
 ```
-▶ ulozto-downloader URL
+ulozto-downloader URL
 ```
 
 #### Example on Synology: /volume1/<SHARED_FOLDER_NAME>
@@ -40,20 +46,19 @@ function ulozto-downloader { screen -dm docker run --rm -t -v /volume1/ulozto:/d
 ## Install/Build (Ubuntu) [not tested]
 
 ```
-▶ git clone https://github.com/kiwiiikiwiiikiwiii/ulozto-downloader/ && cd ulozto-downloader
-▶ docker build -t ulozto-downloader . --no-cache
+git clone https://github.com/kiwiiikiwiiikiwiii/ulozto-downloader/ && cd ulozto-downloader
+docker build -t ulozto-downloader . --no-cache
 ```
 
 ## Setup (Ubuntu) [not tested]
-
+#### Add function to ~/.bashrc:
 ```
-▶ add function to ~/.bashrc:
-  function ulozto-downloader { screen -dm sudo docker run --rm -t -v <YOUR_PATH>:/d ulozto-downloader "$1"; }
-▶ source ~/.bashrc
+function ulozto-downloader { screen -dm sudo docker run --rm -t -v <YOUR_PATH>:/d ulozto-downloader "$1"; }
+source ~/.bashrc
 ```
 ## Usage (Ubuntu) [not tested]
 ```
-▶ ulozto-downloader URL
+ulozto-downloader URL
 ```
 Note: `YOUR_PATH` paramater must be an absolute path to destination folder, where the file will be downloaded to, ie. your samba share.
 
