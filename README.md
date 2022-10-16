@@ -22,7 +22,7 @@ docker build -t ulozto-downloader . --network=host --no-cache
 #### Add function to /etc.defaults/.bashrc_profile
 
 ```
-function ulozto-downloader { screen -dm sudo docker run --network=host --rm -t -v <YOUR_PATH>:/d ulozto-downloader "$1"; }
+function downloader { screen -dm sudo docker run --network=host --rm -t -v <YOUR_PATH>:/d ulozto-downloader "$1"; }
 source /etc.defaults/.bashrc_profile
 ```
 #### Add user to run docker command with sudo
@@ -53,7 +53,7 @@ docker build -t ulozto-downloader . --no-cache
 ## Setup (Ubuntu) [not tested]
 #### Add function to ~/.bashrc:
 ```
-function ulozto-downloader { screen -dm sudo docker run --rm -t -v <YOUR_PATH>:/d ulozto-downloader "$1"; }
+function downloader { screen -dm sudo docker run --rm -t -v <YOUR_PATH>:/d ulozto-downloader "$1"; }
 source ~/.bashrc
 ```
 ## Usage (Ubuntu) [not tested]
